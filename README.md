@@ -1,1 +1,1 @@
-# m1-laravel-cours
+# M1 - Cours de Laravel
