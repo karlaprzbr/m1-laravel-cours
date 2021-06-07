@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\LivresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,26 +31,11 @@ Route::get('/controllers', function () {
     return view('controllers');
 });
 
-Route::get('/test', function () {
-    return view('test');
+Route::get('/bdd', function () {
+    return view('bdd');
 });
 
-Route::get('/test/calcul', function () {
-    return view('calcul', ["nb1"=>7, "nb2"=>8]);
-});
-
-Route::get('/test/calcul/{nb1}', function ($nb1) {
-    return view('calcul', ["nb1"=>$nb1, "nb2"=>8]);
-});
-
-Route::get('/test/calcul/{nb1}/{nb2}', function ($nb1, $nb2) {
-    return view('calcul', ["nb1"=>$nb1, "nb2"=>$nb2]);
-});
-
-// Route::get('/test2', [
-//     TestController::class, "index"
-// ]);
-
+// FORMULAIRES
 Route::get('/form', [
     TestController::class, "form"
 ]);
@@ -59,3 +45,8 @@ Route::post('form', [
 ]);
 
 // Route::match(["get", "post"], "/formulaire", [TestController::class, "form"]);
+
+// MODELS
+Route::get('/livres', [
+    LivresController::class, "liste"
+]);

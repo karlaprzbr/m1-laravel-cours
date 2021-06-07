@@ -1,4 +1,4 @@
-@extends('base')
+@extends('base-2')
 @section('content')
 <h1>Templating avec <code>Blade</code></h1>
 
@@ -17,7 +17,9 @@
 <code>... code ...</code>
 <code>&#64;endsection</code>
 </pre>
+
 <ul>
+    <li>A chaque création de view, il faut créer sa route correspondante</li>
     <li>L'affichage des liens internes</li>
 </ul>
 <pre class="code bg-light rounded">

@@ -1,4 +1,4 @@
-@extends('base')
+@extends('base-2')
 @section('content')
 <h1>Controllers</h1>
 <pre class="code bg-light rounded">
